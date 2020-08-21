@@ -14,7 +14,8 @@ function write_ws_xml_datavalidation_formula(validations) {
 		if (validation.inputTitle && validation.inputMessage) {
 			o += 'showInputMessage="1"  promptTitle="' + validation.inputTitle + '" prompt="' + validation.inputMessage + '" ';
 		}
-		o += 'sqref="' + validation.sqref + '">';
+		o += '>';
+		o += '<sqref>' + validation.sqref + '</sqref>';
 		o += '<formula1><f>' + validation.sheetRef + '</f></formula1>';
 		o += '</dataValidation>';
 	}
